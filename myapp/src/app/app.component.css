@@ -1,0 +1,16 @@
+:root {
+    --bg-color:#1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+html {
+    font-size:62.5%;
+    overflow-x:hidden;    
+}
+
+.body {
+    background: var(--bg-color);
+    color:var(--text-color)
+}
