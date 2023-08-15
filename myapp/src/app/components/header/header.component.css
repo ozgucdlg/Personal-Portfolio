@@ -1,0 +1,18 @@
+#navbarSupportedContent{
+   
+    width:500px;
+   
+}
+.header{
+    position: fixed; /* Sabit konum */
+    top: 0; /* Sayfanın altına yapıştır */
+    width: 100%; /* Sayfa genişliği kadar */
+    height: 60px; /* Footer yüksekliği */
+    background: linear-gradient(to top,#9590d0,#040d76);
+}
+
+#naviBox{
+    float:right;
+    margin-right: 0px;
+    
+}
