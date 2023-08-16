@@ -44,34 +44,25 @@
         height:500px;
         list-style: none;
         margin: 0;
-        padding: 0;
-        background-color: aqua;
-        position: absolute;
+        padding: 0;     
+        position: absolute; 
         top: 60px;
         right: 0;
         width: 130px; /* Menü genişliğini artırın */
         transform: translateX(100%);
         transition: 0.4s;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Menüye gölge ekleyin */
-        background: linear-gradient(to right,#9590d0,#040d76);
-        color: #ccc;
-      
-        li {
-          padding: 15px; /* Menü öğe içeriğinin boşluğunu artırın */
-          border-bottom: 1px solid #ccc;
-          height: 100px;
-      
-          a {
-            color: #333;
-            text-decoration: none;
-            transition: color 0.2s;
-      
-            &:hover {
-              color: #ff5733;
-            }
-          }
-        }
+        background: linear-gradient(to top,#fff,#bfe7f0);
+        color:blue;
+        cursor:pointer;
       }
+
+    .menu li {
+      padding: 15px; /* Menü öğe içeriğinin boşluğunu artırın */
+       margin-top: 20px;
+      height: 100px;
+  
       
+    }  
   }
   

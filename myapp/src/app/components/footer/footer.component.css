@@ -2,7 +2,7 @@
     position: fixed; /* Sabit konum */
     bottom: 0; /* Sayfanın altına yapıştır */
     width: 100%; /* Sayfa genişliği kadar */
-    height: 150px; /* Footer yüksekliği */
-    background: linear-gradient(to bottom,#9590d0,#040d76);
+    height: 100px; /* Footer yüksekliği */
+    background: linear-gradient(to left,#fff,#bfe7f0);
 
 }

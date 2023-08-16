@@ -8,7 +8,7 @@
     top: 0; /* Sayfanın altına yapıştır */
     width: 100%; /* Sayfa genişliği kadar */
     height: 60px; /* Footer yüksekliği */
-    background: linear-gradient(to top,#9590d0,#040d76);
+    background: linear-gradient(to right,#fff,#bfe7f0);
 }
 
 #naviBox{
