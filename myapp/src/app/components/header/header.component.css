@@ -1,6 +1,6 @@
 #navbarSupportedContent{
    
-    width:500px;
+   
    
 }
 .header{
@@ -8,6 +8,7 @@
     top: 0; /* Sayfanın altına yapıştır */
     width: 100%; /* Sayfa genişliği kadar */
     height: 60px; /* Footer yüksekliği */
+    display:flex;
     background: linear-gradient(to right,#fff,#bfe7f0);
 }
 
