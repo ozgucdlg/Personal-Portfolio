@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class UserrService implements OnInit {
 
   apiUrl="http://localhost:8080/api/users/getall"
+  apiUrlToCreate="http://localhost:8080/api/users/add"
 
   constructor(private httpClient:HttpClient) {
 
@@ -20,5 +21,9 @@ export class UserrService implements OnInit {
   getall():Observable<Userr[]>{
     return this.httpClient.get<Userr[]>(this.apiUrl);
   
+  }
+
+  createUser(userr: Userr): Observable<Userr> {
+    return this.httpClient.post<Userr>(this.apiUrlToCreate, userr);
   }
 }

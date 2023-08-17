@@ -1,27 +1,28 @@
 <div class="container">
-
+  <form   (ngSubmit)="createUser()">
   <div class="row">
     <div class="col-6">
 
+      
       <div class="mb-3 ">
         <label for="exampleFormControlInput1" class="form-label w-50">Name</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="type your name..">
+        <input type="text" class="form-control"  [(ngModel)]="user.userName"     name="userName"  placeholder="type your name.."  required>
       </div>
       <div class="mb-3 ">
-        <label for="exampleFormControlInput1" class="form-label">Email Addess</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email address">
+        <label for="exampleFormControlInput1"  class="form-label">Email Addess</label>
+        <input type="email" class="form-control"  [(ngModel)]="user.email" name="email" placeholder="Email address">
       </div>
 
     </div>
 
     <div class="col-6">
       <div class="mb-3 ">
-        <label for="exampleFormControlInput1" class="form-label w-50">Last Name</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="type your last name..">
+        <label for="exampleFormControlInput1"   class="form-label w-50">Last Name</label>
+        <input type="email" class="form-control" [(ngModel)]="user.lastName"  name="userName"  placeholder="type your last name..">
       </div>
       <div class="mb-3 ">
-        <label for="exampleFormControlInput1" class="form-label">Phone</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Phone number">
+        <label for="exampleFormControlInput1"    class="form-label">Phone</label>
+        <input type="email" class="form-control" [(ngModel)]="user.phoneNumber"  name="phoneNumber" placeholder="Phone number">
       </div>
 
 
@@ -29,8 +30,8 @@
     </div>
 
     <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <label for="exampleFormControlTextarea1"      class="form-label">Your Message</label>
+      <textarea class="form-control" [(ngModel)]="user.message" name="message" rows="3"></textarea>
     </div>
 
     <div style="margin-left: 235px;;">
@@ -40,12 +41,12 @@
 
          
     
-      <span><button type="button" class="btn btn-outline-success" style="margin-left: 20px;"  id="liveToastBtn">        
+      <span><button type="submit" class="btn btn-outline-success" style="margin-left: 20px;" >        
         
           <i class="fa-solid fa-check"></i>
           Submit</button></span>
 
-          <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+          
 
          
     </div>
@@ -54,7 +55,7 @@
 </div>
 
 
-
+  </form>
 
 
 </div>
