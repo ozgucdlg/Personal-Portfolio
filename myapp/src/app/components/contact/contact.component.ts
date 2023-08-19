@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { UserrService } from 'src/app/services/userr.service';
 import { Userr } from 'src/model/userr';
 
@@ -20,7 +21,7 @@ export class ContactComponent implements OnInit {
 
   }
 
-  constructor(private userrService:UserrService, private router:Router){
+  constructor(private userrService:UserrService, private router:Router, private toastr: ToastrService){
 
   }
 
@@ -30,8 +31,14 @@ export class ContactComponent implements OnInit {
 
     createUser(){
      this.userrService.createUser(this.user).subscribe(()=>{
-        this.router.navigate(['/']); 
+        this.router.navigate(['/contact']); 
       })
+  }
+
+
+
+  showSuccess() {
+    this.toastr.success('İşlem başarıyla tamamlandı.', 'Başarılı');
   }
 
 }

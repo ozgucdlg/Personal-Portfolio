@@ -31,7 +31,7 @@
 
     <div class="mb-3">
       <label for="exampleFormControlTextarea1"      class="form-label">Your Message</label>
-      <textarea class="form-control" [(ngModel)]="user.message" name="message" rows="3"></textarea>
+      <textarea class="form-control" [(ngModel)]="user.message" name="message" rows="3" required></textarea>
     </div>
 
     <div style="margin-left: 235px;;">
@@ -41,7 +41,7 @@
 
          
     
-      <span><button type="submit" class="btn btn-outline-success" style="margin-left: 20px;" >        
+      <span><button type="submit" class="btn btn-outline-success" style="margin-left: 20px;"   (click)="showSuccess()" >        
         
           <i class="fa-solid fa-check"></i>
           Submit</button></span>

@@ -15,6 +15,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TypingComponent } from './components/typing/typing.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Animasyonları ekleyin
+import { ToastrModule } from 'ngx-toastr'; // ToastyModule'ü ekleyin
+
 
 @NgModule({
   declarations: [
@@ -34,6 +37,8 @@ import { TypingComponent } from './components/typing/typing.component';
     AppRoutingModule, 
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule, // Animasyonları ekleyin
+    ToastrModule.forRoot() // ToastyModule'ü ekleyin
    
     
   ],
