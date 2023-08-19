@@ -13,6 +13,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TypingComponent } from './components/typing/typing.component';
+
 
 @NgModule({
   declarations: [
@@ -24,13 +26,16 @@ import { HttpClientModule } from '@angular/common/http';
     PortfolioComponent,
     HamburgerComponent,
     FooterComponent,
-    LogoComponent
+    LogoComponent,
+    TypingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule,
-    FormsModule
+    FormsModule,
+   
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
