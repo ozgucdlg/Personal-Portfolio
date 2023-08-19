@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+ 
 }
 
 .menu-icon {
   cursor: pointer;
   display: block;
-  position: relative;
+  position: fixed;
   padding: 20px;
   z-index: 2;
 }
@@ -41,11 +42,11 @@
 }
   
     .menu {
-        height:500px;
+      position:fixed;
+        height:100%;
         list-style: none;
         margin: 0;
-        padding: 0;     
-        position: absolute; 
+        padding: 0;          
         top: 60px;
         right: 0;
         width: 130px; /* Menü genişliğini artırın */

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
+
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { HamburgerComponent } from './components/hamburger/hamburger.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -16,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { TypingComponent } from './components/typing/typing.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Animasyonları ekleyin
-import { ToastrModule } from 'ngx-toastr'; // ToastyModule'ü ekleyin
+import { ToastrModule } from 'ngx-toastr';
+import { BlogComponent } from './components/blog/blog.component'; // ToastyModule'ü ekleyin
 
 
 @NgModule({
@@ -25,12 +26,13 @@ import { ToastrModule } from 'ngx-toastr'; // ToastyModule'ü ekleyin
     HeaderComponent,
     ContactComponent,
     HomeComponent,
-    AboutComponent,
+    BlogComponent,
     PortfolioComponent,
     HamburgerComponent,
     FooterComponent,
     LogoComponent,
-    TypingComponent
+    TypingComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,

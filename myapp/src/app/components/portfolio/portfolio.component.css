@@ -1,0 +1,8 @@
+.btn.btn-outline-info {
+    color:deepskyblue; /* Varsayılan metin rengi */
+  }
+  
+  /* Metin rengini üzerine gelince değiştirme */
+  .btn.btn-outline-info:hover {
+    color: white; /* Metin rengini beyaz olarak değiştirme */
+  }
