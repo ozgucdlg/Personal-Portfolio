@@ -9,31 +9,31 @@ import { Subscription, interval } from 'rxjs';
   templateUrl: './typing.component.html',
   styleUrls: ['./typing.component.css']
 })
-export class TypingComponent  implements OnInit,OnDestroy   {
-  text = "I am, Oguchi Dalga";
+export class TypingComponent  implements OnInit   {
+  textArray = ["Youteber", "FullStack developer", "Application Developer"];
+  currentTextIndex = 0;
+  currentCharIndex = 0;
   typedText = '';
-  currentIndex = 0;
-  typeSpeed = 100; // Hızı ayarlayabilirsiniz
-  typingSubscription: Subscription | undefined;
 
   constructor(){
 
   }
  
   ngOnInit(): void {
-    this.typingSubscription = interval(this.typeSpeed).subscribe(() => {
-      if (this.currentIndex < this.text.length) {
-        this.typedText += this.text.charAt(this.currentIndex);
-        this.currentIndex++;
-      } else {
-        this.typingSubscription?.unsubscribe();
-      }
-    });
+   this.typeText();
   }
 
-
-  ngOnDestroy(): void {
-    this.typingSubscription?.unsubscribe();
+  typeText() {
+    if (this.currentCharIndex < this.textArray[this.currentTextIndex].length) {
+      this.typedText += this.textArray[this.currentTextIndex].charAt(this.currentCharIndex);
+      this.currentCharIndex++;
+      setTimeout(() => this.typeText(), 100); // Hızı ve zamanlamayı ayarlayabilirsiniz
+    } else {
+      this.currentCharIndex = 0;
+      this.currentTextIndex = (this.currentTextIndex + 1) % this.textArray.length; // Döngü için metin dizisini dolaş
+      this.typedText = ''; // Metni temizle
+      setTimeout(() => this.typeText(), 1000); // Bir sonraki metin için bekleme süresi
+    }
   }
   
 

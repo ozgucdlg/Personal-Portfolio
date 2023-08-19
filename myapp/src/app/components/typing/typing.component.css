@@ -1,5 +1,7 @@
 .typewriter-container {
-  font-size: 24px;
-  font-family: 'Arial', sans-serif;
-  margin-bottom: 20px;
+  font-size: 36px;
+  background: linear-gradient(45deg, blue, blue);
+  background-clip: text; /* Apply gradient to text content */
+  -webkit-background-clip: text; /* For Safari/WebKit browsers */
+  color: transparent; /* Hide actual text content */
 }
