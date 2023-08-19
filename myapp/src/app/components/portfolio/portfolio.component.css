@@ -6,3 +6,8 @@
   .btn.btn-outline-info:hover {
     color: white; /* Metin rengini beyaz olarak değiştirme */
   }
+
+  .carousel-item{
+    width: 500px;
+    height: 100%;
+}
