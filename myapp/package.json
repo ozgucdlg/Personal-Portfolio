@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "^16.2.1",
     "@angular/router": "^16.2.1",
     "bootstrap": "^5.3.1",
+    "file-saver": "^2.0.5",
     "jquery": "^3.7.0",
     "ng2-typewriter": "^1.1.0",
     "ngx-toaster": "^1.0.1",

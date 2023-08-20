@@ -17,7 +17,8 @@ import { TypingComponent } from './components/typing/typing.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Animasyonları ekleyin
 import { ToastrModule } from 'ngx-toastr';
-import { BlogComponent } from './components/blog/blog.component'; // ToastyModule'ü ekleyin
+import { BlogComponent } from './components/blog/blog.component';
+import { PdfDpwnloadComponent } from './components/pdf-dpwnload/pdf-dpwnload.component'; // ToastyModule'ü ekleyin
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { BlogComponent } from './components/blog/blog.component'; // ToastyModul
     FooterComponent,
     LogoComponent,
     TypingComponent,
-    BlogComponent
+    BlogComponent,
+    PdfDpwnloadComponent
   ],
   imports: [
     BrowserModule,
