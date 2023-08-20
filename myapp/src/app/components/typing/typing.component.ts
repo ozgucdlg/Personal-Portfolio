@@ -27,7 +27,7 @@ export class TypingComponent  implements OnInit   {
     if (this.currentCharIndex < this.textArray[this.currentTextIndex].length) {
       this.typedText += this.textArray[this.currentTextIndex].charAt(this.currentCharIndex);
       this.currentCharIndex++;
-      setTimeout(() => this.typeText(), 100); // Hızı ve zamanlamayı ayarlayabilirsiniz
+      setTimeout(() => this.typeText(), 150); // Hızı ve zamanlamayı ayarlayabilirsiniz
     } else {
       this.currentCharIndex = 0;
       this.currentTextIndex = (this.currentTextIndex + 1) % this.textArray.length; // Döngü için metin dizisini dolaş
