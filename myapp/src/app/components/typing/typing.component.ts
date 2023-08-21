@@ -10,7 +10,7 @@ import { Subscription, interval } from 'rxjs';
   styleUrls: ['./typing.component.css']
 })
 export class TypingComponent  implements OnInit   {
-  textArray = ["Youteber", "FullStack developer", "Application Developer"];
+  textArray = ["Software developer", "Web developer", "Application Developer"];
   currentTextIndex = 0;
   currentCharIndex = 0;
   typedText = '';

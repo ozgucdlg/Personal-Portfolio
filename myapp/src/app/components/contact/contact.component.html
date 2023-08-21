@@ -1,58 +1,64 @@
-<div class="container"  style="margin-top: 100px;;">
-  <form   (ngSubmit)="createUser()">
-  <div class="row">
-    <div class="col-6">
 
-      
-      <div class="mb-3 ">
-        <label for="exampleFormControlInput1" class="form-label w-50">Name</label>
-        <input type="text" class="form-control"  [(ngModel)]="user.userName"     name="userName"  placeholder="type your name.."  required>
-      </div>
-      <div class="mb-3 ">
-        <label for="exampleFormControlInput1"  class="form-label">Email Addess</label>
-        <input type="email" class="form-control"  [(ngModel)]="user.email" name="email" placeholder="Email address" required>
-      </div>
+<body>
+<div class="container" style="margin-top: 100px;">
+  <form (ngSubmit)="createUser()">
+    <div class="row">
+      <div class="col">
 
-    </div>
 
-    <div class="col-6">
-      <div class="mb-3 ">
-        <label for="exampleFormControlInput1"   class="form-label w-50">Last Name</label>
-        <input type="email" class="form-control" [(ngModel)]="user.lastName"  name="userName"  placeholder="type your last name.."  required>
-      </div>
-      <div class="mb-3 ">
-        <label for="exampleFormControlInput1"    class="form-label">Phone</label>
-        <input type="email" class="form-control" [(ngModel)]="user.phoneNumber"  name="phoneNumber" placeholder="Phone number" required>
+        <div class="mb-3 ">
+          <label for="exampleFormControlInput1" class="form-label ">Name</label>
+          <input type="text" class="form-control" [(ngModel)]="user.userName" name="userName"
+            placeholder="type your name.." required>
+        </div>
+        <div class="mb-3 ">
+          <label for="exampleFormControlInput1" class="form-label">Email Addess</label>
+          <input type="email" class="form-control" [(ngModel)]="user.email" name="email" placeholder="Email address"
+            required>
+        </div>
+
       </div>
 
+      <div class="col">
+        <div class="mb-3 ">
+          <label for="exampleFormControlInput1" class="form-label ">Last Name</label>
+          <input type="email" class="form-control" [(ngModel)]="user.lastName" name="userName"
+            placeholder="type your last name.." required>
+        </div>
+        <div class="mb-3 ">
+          <label for="exampleFormControlInput1" class="form-label">Phone</label>
+          <input type="email" class="form-control" [(ngModel)]="user.phoneNumber" name="phoneNumber"
+            placeholder="Phone number" required>
+        </div>
+
+
+
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
+        <textarea class="form-control" [(ngModel)]="user.message" name="message" rows="3" required></textarea>
+      </div>
+
+      <div class="w-100" >
+        <span style="margin-left: 450px; margin-right:20px;"><button type="button" class="btn btn-outline-danger"  routerLink="">
+            <i class="fa-solid fa-xmark"></i>
+            Cancel</button></span>
+
+
+
+        <span><button type="submit" class="btn btn-outline-success"  (click)="showSuccess()">
+
+            <i class="fa-solid fa-check"></i>
+            Submit</button></span>
+
+
+
+
+      </div>
 
 
     </div>
-
-    <div class="mb-3">
-      <label for="exampleFormControlTextarea1"      class="form-label">Your Message</label>
-      <textarea class="form-control" [(ngModel)]="user.message" name="message" rows="3" required></textarea>
-    </div>
-
-    <div style="margin-left: 235px;;">
-      <span><button type="button" class="btn btn-outline-danger" style="margin-left: 200px;" routerLink="">
-          <i class="fa-solid fa-xmark"></i>
-          Cancel</button></span>
-
-         
-    
-      <span><button type="submit" class="btn btn-outline-success" style="margin-left: 20px;"   (click)="showSuccess()" >        
-        
-          <i class="fa-solid fa-check"></i>
-          Submit</button></span>
-
-          
-
-         
-    </div>
-
-
-</div>
 
 
   </form>
@@ -60,3 +66,4 @@
 
 </div>
 
+</body>

@@ -1,86 +1,8 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.sky {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: blue;
-}
-
-.star {
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  background-color: blue;
-  border-radius: 50%;
-  animation: starAnimation linear infinite;
-}
-
-@keyframes starAnimation {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh);
-    opacity: 0;
-  }
-}
-
-.star:nth-child(1) {
-  left: 10%;
-  animation-duration: 5s;
-}
-
-.star:nth-child(2) {
-  left: 30%;
-  animation-duration: 7s;
-}
-
-.star:nth-child(3) {
-  left: 70%;
-  animation-duration: 6s;
-}
-
-.star:nth-child(4) {
-  left: 250%;
-  animation-duration: 7s;
-}
-
-.star:nth-child(5) {
-  left: 330%;
-  animation-duration: 5s;
-}
-
-.star:nth-child(6) {
-  left: 85%;
-  animation-duration: 6s;
-}
-
 .intro {
   width: 100%;
-  height: 100vh;
-  background-color: lightblue; /* Başlangıç rengi */
-  animation: skyAnimation 10s linear infinite; 
+  height: 500px; 
+  
   display: flex;
-}
-
-@keyframes skyAnimation {
-  0% {
-    background-color: white;
-  }
-  50% {
-    background-color: white; /* Yarı noktada daha koyu mavi */
-  }
-  100% {
-    background-color: white;
-  }
 }
 
 .intro.mobile {
@@ -89,15 +11,17 @@ body, html {
 }
 
 .intro .left {
+  margin-top: 70px;
   flex: 0.5;
   overflow: hidden;
+  height: 100%;
 }
 
 .intro .left .imgContainer {
   margin-top:70px;
   margin-left: 100px;
   width: 450px;
-  height: 450px;
+  height: 400px;
   background: linear-gradient(to left,#fbfbfb,#bfe7f0);
   border-radius: 50%;
   display: flex;
@@ -111,7 +35,11 @@ body, html {
 }
 
 .intro .left .imgContainer img {
-  height: 80%;
+  height: 85%;
+  width: 70%;
+  border-radius: 40% 40%40% 0%;
+  mask-image: linear-gradient(to top, transparent 40%, white 100%);
+  mask-size: 100% 100%;
 
 }
 
@@ -122,9 +50,10 @@ body, html {
 }
 
 .intro .right {
- 
+ margin-top: 80px;
   flex: 0.5;
   position: relative;
+  height: 100%;
 }
 
 .intro .right .wrapper {
@@ -167,39 +96,76 @@ body, html {
   color: rgb(85, 127, 182);
 }
 
-.intro .right .wrapper h3 .ityped-cursor {
-  animation: blink 1s infinite;
+
+
+
+
+.sky {
+  position: relative;
+  width: 100%;
+  height: 100%;
+ 
 }
 
-@keyframes blink {
-  50% {
+.star {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+  border-radius: 50%;
+  animation: starAnimation linear infinite;
+}
+
+@keyframes starAnimation {
+  0% {
+    transform: translateY(0);
     opacity: 1;
   }
   100% {
+    transform: translateY(100vh);
     opacity: 0;
   }
 }
 
-.intro .right a {
-  position: absolute;
-  bottom: 10px;
-  left: 40%;
+.star:nth-child(1) {
+  left: 11%;
+  animation-duration: 5s;
 }
 
-.intro .right a img {
-  width: 30px;
-  animation: arrowBlink 2s infinite;
+.star:nth-child(2) {
+  left: 24%;
+  animation-duration: 7s;
 }
 
-@keyframes arrowBlink {
-  100% {
-    opacity: 0;
-  }
+.star:nth-child(3) {
+  left: 35%;
+  animation-duration: 6s;
+}
+.star:nth-child(4) {
+  left: 47%;
+  animation-duration: 5s;
 }
 
-.photo{
-  width: 70%;
-  border-radius: 40% 40%40% 0%;
-  mask-image: linear-gradient(to top, transparent 40%, white 100%);
-  mask-size: 100% 100%;
+.star:nth-child(5) {
+  left: 60%;
+  animation-duration: 7s;
+}
+
+.star:nth-child(6) {
+  left: 71%;
+  animation-duration: 6s;
+}
+.star:nth-child(7) {
+  left: 83%;
+  animation-duration: 5s;
+}
+
+.star:nth-child(8) {
+  left: 89%;
+  animation-duration: 7s;
+}
+
+.star:nth-child(9) {
+  left: 95%;
+  animation-duration: 6s;
 }

@@ -38,7 +38,7 @@ export class ContactComponent implements OnInit {
 
 
   showSuccess() {
-    this.toastr.success('İşlem başarıyla tamamlandı.', 'Başarılı');
+    this.toastr.success('It was proced succesfully.', 'Submitted');
   }
 
 }
