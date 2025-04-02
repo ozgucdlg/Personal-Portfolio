@@ -1,27 +1,65 @@
-# Personal-Portfolio
-This GitHub repository shows Oguchi's personal Portfolio.
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+# Personal Portfolio Website
 
-## Development server
+A professional portfolio website showcasing my skills, projects, and experience as a developer.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![Portfolio Preview](assets/myPicUpdated.jpg)
 
-## Code scaffolding
+## Overview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This portfolio website serves as a showcase of my programming skills, projects, and professional background. It features a clean, responsive design with smooth animations and an intuitive user interface.
 
-## Build
+## Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Responsive Design**: Looks great on all devices, from mobile to desktop
+- **Animated Elements**: Smooth animations using AOS (Animate On Scroll)
+- **Dynamic Typing Effect**: Showcases multiple skills with a typewriter effect
+- **Project Showcase**: Detailed project cards with descriptions and links
+- **Blog Section**: Shareable articles about development topics
+- **Contact Form**: Easy way for visitors to get in touch
+- **Resume Download**: One-click resume download option
 
-## Running unit tests
+## Technologies Used
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **HTML5/CSS3**: For structure and styling
+- **JavaScript**: For interactive elements
+- **Bootstrap**: For responsive layout components
+- **Font Awesome**: For icons
+- **AOS Library**: For scroll animations
 
-## Running end-to-end tests
+## Setup and Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clone this repository:
+   ```
+   git clone https://github.com/ozgucdlg/Personal-Portfolio.git
+   ```
 
-## Further help
+2. Navigate to the project directory:
+   ```
+   cd Personal-Portfolio
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Open the project in your browser:
+   - You can use a local development server like Live Server for VS Code
+   - Or simply open the index.html file in your browser
+
+## Usage
+
+This portfolio template can be customized by:
+
+1. Replacing the profile image in the assets folder
+2. Updating project information in projects.html
+3. Modifying personal details and skills in index.html
+4. Adding blog posts in blogs.html
+5. Updating the contact information in contact.html
+
+## Contact
+
+Feel free to connect with me:
+
+- **GitHub**: [ozgucdlg](https://github.com/ozgucdlg)
+- **LinkedIn**: [Ozguc Dalga](https://www.linkedin.com/in/ozguc-dalga-702136322/)
+- **Twitter**: [@dlgozguc](https://x.com/dlgozguc)
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE). 
