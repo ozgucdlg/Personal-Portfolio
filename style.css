@@ -223,7 +223,7 @@ section img{
         content: "Designer";
     }
     67%, 100%{
-        content: "Former Engineer";
+        content: "Former Mec. Engineer";
     }
 }
 .content p{
@@ -529,5 +529,96 @@ body::-webkit-scrollbar {
   
   .references-container {
     grid-template-columns: 1fr;
+  }
+}
+
+/* About page styling */
+.about-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.about-title-container {
+  text-align: center;
+  position: relative;
+  margin: 100px 0 20px;
+  padding: 0 20px;
+}
+
+.about-title-container h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.about-title-container h1 span {
+  color: rgb(109,67, 0);
+  position: relative;
+  display: inline-block;
+}
+
+.about-title-underline {
+  height: 4px;
+  width: 100px;
+  background: linear-gradient(to right, rgb(254,215,173), rgb(109,67,0));
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.about-bio-container {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  padding: 30px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(109,67,0, 0.08);
+}
+
+.about-bio-container::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(254,215,173), rgb(109,67,0));
+  border-radius: 4px 0 0 4px;
+}
+
+.about-bio-container p {
+  padding: 0;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #333;
+  text-align: justify;
+  margin: 0;
+}
+
+.about-bio-container p::first-letter {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: rgb(109,67,0);
+  float: left;
+  padding-right: 10px;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .about-title-container {
+    margin: 50px 0 30px;
+  }
+  
+  .about-title-container h1 {
+    font-size: 2rem;
+  }
+  
+  .about-bio-container {
+    padding: 20px;
+    margin-bottom: 40px;
   }
 }
