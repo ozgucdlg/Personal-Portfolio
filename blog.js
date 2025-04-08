@@ -7,7 +7,18 @@ const blogPosts = [
         category: "programming",
         date: "2023-08-06",
         image: "/assets/postman.jpg",
-        readTime: "5 min read"
+        readTime: "5 min read",
+        url:"https://medium.com/@ozgucdalga/how-to-use-postman-more-effective-1a031d7a96d5"
+    },
+    {
+        id: 2,
+        title: "What is Java Spring Rag and how to use it properly?",
+        excerpt: "Hey Folks in this article we are going to dive in about Spring Framework world by specializing the use Rag.",
+        category: "programming",
+        date: "2024-01-06",
+        image: "/assets/spring.jpeg",
+        readTime: "5 min read",
+        url:"https://medium.com/@ozgucdalga/what-is-java-spring-and-how-to-use-it-properly-2c5e9b0e7cc6"
     },
     // Add more blog posts as needed
 ];
@@ -20,7 +31,8 @@ function createBlogCard(post) {
                 <img src="${post.image}" class="card-img-top" alt="${post.title}">
                 <span class="badge bg-primary category-badge">${post.category}</span>
                 <div class="card-body">
-                   <a href="https://medium.com/@ozgucdalga/how-to-use-postman-more-effective-1a031d7a96d5"> 
+            
+                    <a href="${post.url}"  target="_blank"> 
                    <h5 class="card-title">${post.title}</h5>
                    </a>
                     <p class="card-text">${post.excerpt}</p>
@@ -31,6 +43,7 @@ function createBlogCard(post) {
                 </div>
             </div>
         </div>
+        
     `;
 }
 
