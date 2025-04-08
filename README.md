@@ -2,7 +2,7 @@
 
 A professional portfolio website showcasing my skills, projects, and experience as a developer.
 
-![Portfolio Preview](assets/myPicUpdated.jpg)
+![Portfolio Preview](assets/myOwnImage.jpg)
 
 ## Overview
 
