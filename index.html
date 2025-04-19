@@ -1,99 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">   
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <title>Ozguc's Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- EmailJS CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
-                <a href="/"  style="text-decoration: none; color: black;"> <span> < /Oguchino> </span> </a>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#home">
+                    <span class="bracket">&lt;</span>Oguchino<span class="bracket">&gt;</span>
+                </a>
             </div>
-            <div class="links">
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="/">Home</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="/about.html">About</a></div>
-                
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="/projects.html">Projects</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="/blogs.html">Blogs</a></div>
-                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="/contact.html">Contact </a></div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">My blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-split">
+            <div class="hero-left">
+                <img src="assets/images/profile/profilePhoto.png" alt="Your Photo" class="hero-image">
             </div>
-            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
-        </div>
-        <div class="dropdown">
-            <div class="links">
-                <a href="/">Home</a>
-                <a href="/about.html">About</a>
-                
-                <a href="/projects.html">Projects</a>
-                <a href="/blogs.html">Blogs</a>
-                <a href="/contact.html">Contact Us</a>
-                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
-            </div>
-        </div>
-    </nav>
-        <section>
-            <div class="main-container"  ">
-                <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
-                    <img src="/assets/myPhoto.jpg" style="box-shadow: 0px 20px 20px rgba(254, 215, 173, 0,4),
-                     -12px -12px 25px rgba(255, 255, 255, 0,4), 0 0 60px rgba(254, 215, 173, 0.3), -20px -20px 40px rgb(255, 255, 255);
-                      transition: all 0.3s ease; border-radius: 8px 16px 8px 8px;" >
+            <div class="hero-right">
+                <h1 class="hero-title">Hi, I'm Ozguc Dalga</h1>
+                <div class="animated-text">
+                    <span class="static-text">I'm </span>
+                    <span id="typed-text"></span>
                 </div>
-                <div class="content">
-                    <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hi I'm <span>Ozguc Dalga</span></h1>
-                    <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">I'm a <span></span></div>
-                   <p  style="margin-bottom: 100px; margin-top: 50px;">
-                    <i class="fa-brands fa-java fa-2xl" style="color: #e67965; margin-right: 20px;"></i>
-                    <i class="fa-brands fa-js fa-2xl" style="color: #a24411;margin-right: 20px;"></i>
-                    <i class="fa-solid fa-database fa-2xl" style="color: #9d1a0c;margin-right: 20px;"></i>
-                    <i class="fa-brands fa-angular fa-2xl" style="color: #9d1a0c;margin-right: 20px;"></i>
-                    <i class="fa-brands fa-react fa-2xl" style="color: #a82a0b;margin-right: 20px;"></i>
-                    <i class="fa-brands fa-python fa-2xl" style="color: #bf1408;margin-right: 20px;"></i>
-                    <i class="fa-brands fa-node fa-2xl" style="color: #a22e11;margin-right: 20px;"></i>
-                    <i class="fa-brands fa-html5 fa-2xl" style="color: #c1390b;margin-right: 20px;"></i>
-                    <i class="fa-brands fa-css fa-2xl" style="color: #d24d14;"></i>
+                <div class="tech-icons">
+                    <i class="fab fa-html5" title="HTML5"></i>
+                    <i class="fab fa-css3-alt" title="CSS3"></i>
+                    <i class="fab fa-java" title="Java"></i>
+                    <i class="fab fa-python" title="Python"></i>
+                    <i class="fab fa-js" title="JavaScript"></i>
+                    <i class="fab fa-node" title="Node.js"></i>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" title="C#">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL">
+                </div>
+                <div class="social-links-hero">
+                    <a href="https://www.linkedin.com/in/ozguc-dalga-702136322/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin" title="LinkedIn"></i>
+                    </a>
+                    <a href="https://github.com/ozgucdlg" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github" title="GitHub"></i>
+                    </a>
+                    <a href="https://medium.com/@ozgucdalga" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-medium" title="Medium"></i>
+                    </a>
+                </div>
+                <a href="assets/images/profile/ozgucdalgaResume.pdf" class="download-resume" download="Ozguc_Dalga_Resume.pdf">Download Resume</a>
+            </div>
+        </div>
+    </section>
 
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-shapes">
+            <div class="about-shape shape-1"></div>
+            <div class="about-shape shape-2"></div>
+            <div class="about-shape shape-3"></div>
+            <div class="about-shape shape-4"></div>
+            <div class="about-shape shape-5"></div>
+            <div class="about-shape shape-6"></div>
+        </div>
+        <h2 data-aos="fade-up">About Me</h2>
+        <div class="about-container" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-image">
+                <img src="assets/images/profile/portfoliophoto3.jpg" alt="Profile Photo" class="about-photo">
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Full Stack Developer & Former Mechanical Engineer</h3>
+                    <p>I am a dedicated Full Stack Developer with four years of experience in designing and building scalable, high-performance applications. My expertise spans both frontend and backend development, including HTML, CSS, JavaScript (Angular, React), Java, C#, Node.js, Spring Boot, .NET Framework, and microservices architecture.</p>
+                    <p>After moving to Canada six years ago, I successfully transitioned from mechanical engineering to pursue my passion for technology. I graduated from Lambton College in 2021, marking a significant milestone in my career shift to software development.</p>
+                    <p>Beyond my professional life, I maintain an active lifestyle through regular gym sessions and enjoy socializing with friends. I'm an avid chess player, constantly challenging myself to think critically and improve my strategic skills. My love for travel and photography allows me to explore and capture the essence of different cultures and landscapes, making me an adventurous and open-minded individual.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                   </p>
-                    <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
-                        <a href="https://github.com/ozgucdlg"  target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.facebook.com/oguchi.dlg"  target="_blank"><i class="fa-brands fa-facebook"  target="_blank"></i></a>
-                        <a href="https://www.linkedin.com/in/ozguc-dalga-702136322"  target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://x.com/dlgozguc"  target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card" data-aos="fade-up">
+                <div class="project-image">
+                    <img src="assets/images/projects/mern.jpeg" alt="History Agenda">
+                </div>
+                <div class="project-content">
+                    <h3>History Agenda</h3>
+                    <p>A full-stack web application for creating and managing historical memories with user authentication and CRUD operations.</p>
+                    <div class="project-tech">
+                        <span>MongoDB</span>
+                        <span>Express.js</span>
+                        <span>React</span>
+                        <span>Node.js</span>
                     </div>
-                    <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
-                       <a href="ozgucdalgaResume(3).pdf"  download="ozgucdalgaResume(3).pdf"    class="download-btn"><button>Download Resume</button> </a>
+                    <a href="https://github.com/ozgucdlg/mernStackHistoryAgenda" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-image">
+                    <img src="assets/images/projects/python-flask.webp" alt="Hotel Reservation System">
+                </div>
+                <div class="project-content">
+                    <h3>Hotel Reservation System</h3>
+                    <p>A comprehensive hotel booking system built with Python and Flask, featuring room management and reservation handling.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>SQLAlchemy</span>
+                        <span>Bootstrap</span>
+                    </div>
+                    <a href="https://github.com/ozgucdlg/Python-and-Flask" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-image">
+                    <img src="assets/images/projects/ecommerce_apps.png" alt="Microservices E-commerce">
+                </div>
+                <div class="project-content">
+                    <h3>E-commerce Microservices</h3>
+                    <p>A comprehensive microservices-based e-commerce system with service discovery, authentication, and product management capabilities.</p>
+                    <div class="project-tech">
+                        <span>Spring Boot</span>
+                        <span>MongoDB</span>
+                        <span>PostgreSQL</span>
+                        <span>JWT</span>
+                    </div>
+                    <a href="https://github.com/ozgucdlg/microservices" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-image">
+                    <img src="assets/images/projects/weatherWise.jpeg" alt="WeatherWise App">
+                </div>
+                <div class="project-content">
+                    <h3>WeatherWise</h3>
+                    <p>A modern JavaFX weather application providing real-time weather information, including temperature, humidity, wind speed, and sun timings for cities worldwide.</p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>JavaFX</span>
+                        <span>OpenWeatherMap API</span>
+                        <span>CSS</span>
+                    </div>
+                    <a href="https://github.com/ozgucdlg/WeatherWiseApp" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-image">
+                    <img src="assets/images/projects/library.jpg" alt="Library Management System">
+                </div>
+                <div class="project-content">
+                    <h3>Library Service System</h3>
+                    <p>A secure library management system implementing JWT authentication, n-tier architecture, and comprehensive API endpoints for book and user management.</p>
+                    <div class="project-tech">
+                        <span>Java 11</span>
+                        <span>Spring Boot</span>
+                        <span>JWT</span>
+                        <span>H2 Database</span>
+                    </div>
+                    <a href="https://github.com/ozgucdlg/libraryService" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="project-image">
+                    <img src="assets/images/projects/adventure.jpeg" alt="Adventure Game">
+                </div>
+                <div class="project-content">
+                    <h3>Adventure Game</h3>
+                    <p>A survival game demonstrating OOP principles with different character classes (Samurai, Archer, Cavalier), multiple battle locations, and dynamic combat mechanics.</p>
+                    <div class="project-tech">
+                        <span>Java 11</span>
+                        <span>OOP</span>
+                        <span>Console Application</span>
+                        <span>Game Design</span>
+                    </div>
+                    <a href="https://github.com/ozgucdlg/AdventureGame" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="project-image">
+                    <img src="assets/images/projects/reactApp.jpg" alt="React Dynamic Project">
+                </div>
+                <div class="project-content">
+                    <h3>Dynamic React Application</h3>
+                    <p>A modern React application showcasing component-based architecture, hooks implementation, and responsive design patterns with clean code practices.</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>JavaScript</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ozgucdlg/ReactProject" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                        <a href="https://react-project-pi-jet.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
                     </div>
                 </div>
             </div>
-      
+        </div>
+    </section>
 
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="blog-shapes">
+            <div class="blog-shape shape-rect"></div>
+            <div class="blog-shape shape-square"></div>
+            <div class="blog-shape shape-diamond"></div>
+            <div class="blog-shape shape-triangle"></div>
+            <div class="blog-shape shape-parallelogram"></div>
+            <div class="blog-shape shape-circle"></div>
+            <div class="blog-shape shape-hexagon"></div>
+            <div class="blog-shape shape-star"></div>
+            <div class="blog-shape shape-dots"></div>
+            <div class="blog-shape shape-ring"></div>
+        </div>
+        <h2 data-aos="fade-up">My Blog</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Sharing thoughts and experiences about technology and development</p>
+        
+        <div class="blog-grid">
+            <article class="blog-card featured" data-aos="zoom-in">
+                <div class="blog-image">
+                    <div class="blog-category">Featured</div>
+                    <img src="assets/images/blog/postman.jpg" alt="How to use Postman more effective">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> Jan 15, 2024</span>
+                        <span><i class="far fa-clock"></i> 5 min read</span>
+                    </div>
+                    <h3>How to use Postman more effective</h3>
+                    <p>Exploring how Postman is revolutionizing API development and testing, making it easier to build and maintain robust applications...</p>
+                    <div class="blog-tags">
+                        <span>#API</span>
+                        <span>#Development</span>
+                        <span>#Postman</span>
+                    </div>
+                    <a href="https://medium.com/@ozgucdalga/how-to-use-postman-more-effective-1a031d7a96d5" target="_blank" rel="noopener noreferrer" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
 
-            
-            
-        </section>
-   
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-        <script>
-          AOS.init({offset:0});
-        </script>
-        <script>
-            function hamburg(){
-                const navbar = document.querySelector(".dropdown")
-                navbar.style.transform = "translateY(0px)"
+            <div class="blog-sidebar">
+                <article class="blog-card compact" data-aos="fade-left" data-aos-delay="100">
+                    <div class="blog-image">
+                        <img src="assets/images/blog/spring.jpeg" alt="Java Spring RAG Article">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> Feb 15, 2024</span>
+                        </div>
+                        <h3>What is Java Spring RAG and how to use it properly?</h3>
+                        <div class="blog-tags">
+                            <span>#Java</span>
+                            <span>#Spring</span>
+                            <span>#RAG</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-form">
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/ozgucdlg" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ozguc-dalga-702136322/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            <a href="https://medium.com/@ozgucdalga" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium"></i></a>
+        </div>
+        <p>&copy; 2025 Ozguc Dalga. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+    <script src="js/main.js"></script>
+    <script>
+    const roles = [
+        'a Software Developer',
+        'a Former Mechanical Engineer',
+        'a Web Developer'
+    ];
+
+    let currentRoleIndex = 0;
+    const typedTextElement = document.getElementById('typed-text');
+
+    function typeText(text, element) {
+        let index = 0;
+        element.textContent = '';
+        element.classList.add('typing');
+
+        function type() {
+            if (index < text.length) {
+                element.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 100);
+            } else {
+                element.classList.remove('typing');
+                setTimeout(() => {
+                    deleteText(element, () => {
+                        currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+                        typeText(roles[currentRoleIndex], element);
+                    });
+                }, 2000);
             }
-            function cancel(){
-                const navbar = document.querySelector(".dropdown")
-                navbar.style.transform = "translateY(-500px)"
+        }
+        type();
+    }
+
+    function deleteText(element, callback) {
+        let text = element.textContent;
+        let interval = setInterval(() => {
+            if (text.length > 0) {
+                text = text.substring(0, text.length - 1);
+                element.textContent = text;
+            } else {
+                clearInterval(interval);
+                if (callback) callback();
             }
-        </script>
+        }, 50);
+    }
+
+    // Start the animation
+    typeText(roles[currentRoleIndex], typedTextElement);
+    </script>
+
+    <style>
+        .project-links {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .project-github-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            background: #f6f8fa;
+            color: #24292e;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            font-size: 0.85em;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .project-github-link i {
+            margin-right: 5px;
+            font-size: 0.9em;
+        }
+
+        .project-github-link:hover {
+            background: #051024;
+            color: white;
+            border-color: #051024;
+            transform: translateY(-1px);
+        }
+    </style>
 </body>
-</html>
+</html> 
