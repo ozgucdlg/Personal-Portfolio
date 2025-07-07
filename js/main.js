@@ -127,10 +127,37 @@ window.addEventListener('scroll', throttle(handleScroll, 100));
 document.addEventListener('DOMContentLoaded', handleScroll);
 window.addEventListener('load', handleScroll);
 
+// Notification System
+function showNotification(message, type = 'success') {
+    const notification = document.getElementById('notification');
+    const messageElement = notification.querySelector('.notification-message');
+    const iconElement = notification.querySelector('.notification-icon');
+    
+    // Set message
+    messageElement.textContent = message;
+    
+    // Set icon based on type
+    iconElement.className = 'notification-icon fas ' + 
+        (type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle');
+    
+    // Set type class
+    notification.className = 'notification ' + type + ' show';
+    
+    // Auto hide after 5 seconds
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 5000);
+}
+
+// Close notification on button click
+document.querySelector('.notification-close').addEventListener('click', () => {
+    document.getElementById('notification').classList.remove('show');
+});
+
 // Contact Form Functionality
 (function() {
     // Initialize EmailJS with your public key
-    emailjs.init("dkaBIZPjEcL8J1VX2"); // You'll need to replace this with your actual public key
+    emailjs.init("dkaBIZPjEcL8J1VX2");
 
     // Get the contact form element
     const contactForm = document.getElementById('contact-form');
@@ -153,17 +180,17 @@ window.addEventListener('load', handleScroll);
             };
 
             // Send email using EmailJS
-            emailjs.send('service_lgws63i', 'template_r4bbbdr', formData) // You'll need to replace with your service and template IDs
+            emailjs.send('service_lgws63i', 'template_r4bbbdr', formData)
                 .then(function() {
-                    // Show success message
-                    alert('Thank you! Your message has been sent successfully.');
+                    // Show success notification
+                    showNotification('Thank you! Your message has been sent successfully.', 'success');
                     
                     // Reset form
                     contactForm.reset();
                 })
                 .catch(function(error) {
-                    // Show error message
-                    alert('Oops! Something went wrong. Please try again later.');
+                    // Show error notification
+                    showNotification('Oops! Something went wrong. Please try again later.', 'error');
                     console.error('EmailJS error:', error);
                 })
                 .finally(function() {
